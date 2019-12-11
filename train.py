@@ -94,6 +94,10 @@ model.classifier = classifier
 criterion = nn.NLLLoss()
 optimizer = optim.Adam(model.classifier.parameters(), lr = arguments.learning_rate)
 
+if torch.cuda.is_available():
+    arguments.gpu = 'cuda'
+else:
+    arguments.gpu = 'cpu' 
 
 def validation(model, validateloader, criterion):
     
