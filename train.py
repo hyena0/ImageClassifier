@@ -96,8 +96,6 @@ optimizer = optim.Adam(model.classifier.parameters(), lr = arguments.learning_ra
 
 if torch.cuda.is_available():
     arguments.gpu = 'cuda'
-else:
-    arguments.gpu = 'cpu' 
 
 def validation(model, validateloader, criterion):
     
