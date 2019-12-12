@@ -121,8 +121,6 @@ def imshow(image, ax=None, title=None):
 
 if torch.cuda.is_available():
     arguments.gpu = 'cuda'
-else:
-    arguments.gpu = 'cpu'
 
 def predict(image_path, model, topk=arguments.topk):
     ''' Predict the class (or classes) of an image using a trained deep learning model.
